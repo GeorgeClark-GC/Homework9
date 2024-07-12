@@ -25,5 +25,14 @@ public class Main {
                 break;
         }
         System.out.println("Минимальная сумма трат за неделю составляет " + minExpense + " рублей.");
+        System.out.println("Example3");
+        int[] expensesThird = {117042, 104117, 102234, 119575, 116825};
+        double sumExpenseThird = 0;
+        double mediumExpense = 0;
+        for (int index = 0; index < expensesThird.length; index++) {
+            sumExpenseThird += expensesThird[index];
+        }
+        mediumExpense = sumExpenseThird / expensesThird.length;
+        System.out.println("Средняя сумма затрат за месяц составляет " + mediumExpense + " рублей.");
     }
 }
