@@ -16,13 +16,11 @@ public class Main {
             }
         }
         System.out.println("Максимальная сумма трат за неделю составляет " + maxExpense + " рублей.");
-        int minExpense = 0;
+        int minExpense = expensesSecond[0];
         for (int index = 0; index < expensesSecond.length; index++) {
-            minExpense = expensesSecond[index];
-            if (minExpense > expensesSecond[index + 1]) {
+            if (minExpense > expensesSecond[index]) {
                 minExpense = expensesSecond[index];
-            } else
-                break;
+            }
         }
         System.out.println("Минимальная сумма трат за неделю составляет " + minExpense + " рублей.");
         System.out.println("Example3");
@@ -36,17 +34,8 @@ public class Main {
         System.out.println("Средняя сумма затрат за месяц составляет " + mediumExpense + " рублей.");
         System.out.println("Example4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        int secondIndex = reverseFullName.length - 1;
-        char correctSign = 0;
-        for (int index = 0; index < reverseFullName.length; index++) {
-            if (index == secondIndex) {
-                break;
-            }
-            correctSign = reverseFullName[index];
-            reverseFullName[index] = reverseFullName[secondIndex];
-            reverseFullName[secondIndex] = correctSign;
-            secondIndex--;
+        for (int index = reverseFullName.length - 1; index >= 0; index--) {
+            System.out.print(reverseFullName[index]);
         }
-        System.out.println(reverseFullName);
     }
 }
