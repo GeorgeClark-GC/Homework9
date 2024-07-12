@@ -34,5 +34,19 @@ public class Main {
         }
         mediumExpense = sumExpenseThird / expensesThird.length;
         System.out.println("Средняя сумма затрат за месяц составляет " + mediumExpense + " рублей.");
+        System.out.println("Example4");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        int secondIndex = reverseFullName.length - 1;
+        char correctSign = 0;
+        for (int index = 0; index < reverseFullName.length; index++) {
+            if (index == secondIndex) {
+                break;
+            }
+            correctSign = reverseFullName[index];
+            reverseFullName[index] = reverseFullName[secondIndex];
+            reverseFullName[secondIndex] = correctSign;
+            secondIndex--;
+        }
+        System.out.println(reverseFullName);
     }
 }
