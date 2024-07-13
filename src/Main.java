@@ -9,28 +9,25 @@ public class Main {
         System.out.println("Сумма затрат компании за месяц составит " + sumExpenses + " рублей.");
         System.out.println("Example2");
         int[] expensesSecond = {113002, 107007, 101011, 103007, 100903};
-        int maxExpense = 0;
+        int maxExpense = expensesSecond[0];
+        int minExpense = expensesSecond[0];
         for (final int current : expensesSecond) {
             if (current > maxExpense) {
                 maxExpense = current;
             }
-        }
-        System.out.println("Максимальная сумма трат за неделю составляет " + maxExpense + " рублей.");
-        int minExpense = expensesSecond[0];
-        for (int index = 0; index < expensesSecond.length; index++) {
-            if (minExpense > expensesSecond[index]) {
-                minExpense = expensesSecond[index];
+            if (minExpense > current) {
+                minExpense = current;
             }
         }
+        System.out.println("Максимальная сумма трат за неделю составляет " + maxExpense + " рублей.");
         System.out.println("Минимальная сумма трат за неделю составляет " + minExpense + " рублей.");
         System.out.println("Example3");
         int[] expensesThird = {117042, 104117, 102234, 119575, 116825};
         double sumExpenseThird = 0;
-        double mediumExpense = 0;
         for (int index = 0; index < expensesThird.length; index++) {
             sumExpenseThird += expensesThird[index];
         }
-        mediumExpense = sumExpenseThird / expensesThird.length;
+        double mediumExpense = sumExpenseThird / expensesThird.length;
         System.out.println("Средняя сумма затрат за месяц составляет " + mediumExpense + " рублей.");
         System.out.println("Example4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
